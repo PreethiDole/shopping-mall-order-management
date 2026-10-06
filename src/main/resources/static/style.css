@@ -1,0 +1,263 @@
+/* ================================
+   General Page
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+}
+
+
+/* ================================
+   Header
+================================ */
+
+header {
+    background: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+
+/* ================================
+   Dashboard Cards
+================================ */
+
+.dashboard {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+
+    text-align: center;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #555;
+}
+
+.card p {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+/* ================================
+   Action Button
+================================ */
+
+.actions {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+button {
+    border: none;
+    padding: 12px 20px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+.actions button {
+    background: #2563eb;
+    color: white;
+}
+
+.actions button:hover {
+    background: #1d4ed8;
+}
+
+
+/* ================================
+   Form
+================================ */
+
+.form-section {
+    width: 90%;
+    max-width: 700px;
+
+    margin: 20px auto;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+
+    display: none;
+}
+
+.form-section h2 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 12px;
+    margin-bottom: 5px;
+
+    font-weight: bold;
+}
+
+form input,
+form select {
+    padding: 10px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    font-size: 15px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.form-buttons button:first-child {
+    background: #16a34a;
+    color: white;
+}
+
+.form-buttons button:last-child {
+    background: #dc2626;
+    color: white;
+}
+
+
+/* ================================
+   Orders Section
+================================ */
+
+.orders-section {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 30px auto;
+}
+
+.orders-section h2 {
+    margin-bottom: 15px;
+}
+
+
+/* ================================
+   Table
+================================ */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: white;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+th {
+    background: #1f2937;
+    color: white;
+
+    padding: 14px;
+
+    text-align: center;
+}
+
+td {
+    padding: 12px;
+
+    text-align: center;
+
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background: #f3f4f6;
+}
+
+
+/* ================================
+   Responsive Design
+================================ */
+
+@media (max-width: 900px) {
+
+    .dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .orders-section {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 900px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .actions,
+    .orders-section,
+    .form-section {
+        width: 95%;
+    }
+}

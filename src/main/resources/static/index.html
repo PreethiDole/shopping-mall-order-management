@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shopping Mall - Order Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>🛍️ Shopping Mall Management</h1>
+        <p>Order Management System</p>
+    </header>
+
+
+    <!-- Dashboard -->
+    <section class="dashboard">
+
+        <div class="card">
+            <h3>Total Orders</h3>
+            <p id="totalOrders">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Confirmed Orders</h3>
+            <p id="confirmedOrders">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Pending Orders</h3>
+            <p id="pendingOrders">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Revenue</h3>
+            <p id="totalRevenue">₹0</p>
+        </div>
+
+    </section>
+
+
+    <!-- Create Order Button -->
+    <section class="actions">
+
+        <button onclick="showCreateOrderForm()">
+            + Create New Order
+        </button>
+
+    </section>
+
+
+    <!-- Create Order Form -->
+    <section id="orderFormSection" class="form-section">
+
+        <h2>Create New Order</h2>
+
+        <form id="orderForm">
+
+            <label>Customer ID</label>
+            <input type="number" id="customerId" required>
+
+
+            <label>Date of Purchase</label>
+            <input type="datetime-local" id="dateOfPurchase" required>
+
+
+            <label>Total</label>
+            <input type="number" id="total" step="0.01" required>
+
+
+            <label>Payment Mode</label>
+            <select id="paymentMode" required>
+                <option value="">Select Payment Mode</option>
+                <option value="CARD">CARD</option>
+                <option value="UPI">UPI</option>
+                <option value="CASH">CASH</option>
+            </select>
+
+
+            <label>Order Status</label>
+            <select id="orderStatus" required>
+                <option value="">Select Status</option>
+                <option value="PENDING">PENDING</option>
+                <option value="CONFIRMED">CONFIRMED</option>
+                <option value="CANCELLED">CANCELLED</option>
+            </select>
+
+
+            <label>Shop ID</label>
+            <input type="number" id="shopId" required>
+
+
+            <div class="form-buttons">
+
+                <button type="submit">
+                    Create Order
+                </button>
+
+                <button type="button" onclick="hideCreateOrderForm()">
+                    Cancel
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+
+    <!-- Orders Table -->
+    <section class="orders-section">
+
+        <h2>Orders</h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Customer</th>
+                    <th>Date</th>
+                    <th>Total</th>
+                    <th>Payment</th>
+                    <th>Status</th>
+                    <th>Shop</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="ordersTableBody">
+
+                <!-- Orders will be loaded here -->
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
